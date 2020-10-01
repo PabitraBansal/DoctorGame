@@ -228,14 +228,22 @@ public class MainActivity extends Activity implements View.OnTouchListener, View
             }
         }
 
-        if(isDoctor==true && isPolice==true && isTeacher==true){
-            TextView doctor_txt = findViewById(R.id.doctor_txt);
-            TextView police_txt = findViewById(R.id.police_txt);
-            TextView teacher_txt = findViewById(R.id.teacher_txt);
+//         if(isDoctor==true && isPolice==true && isTeacher==true){
+        if(isDoctor==true)
+        {
+            if (isPolice==true)
+            {
+                if(isTeacher==true)
+                {
+                TextView doctor_txt = findViewById(R.id.doctor_txt);
+                TextView police_txt = findViewById(R.id.police_txt);
+                TextView teacher_txt = findViewById(R.id.teacher_txt);
 
-            doctor_txt.setVisibility(View.VISIBLE);
-            police_txt.setVisibility(View.VISIBLE);
-            teacher_txt.setVisibility(View.VISIBLE);
+                doctor_txt.setVisibility(View.VISIBLE);
+                police_txt.setVisibility(View.VISIBLE);
+                teacher_txt.setVisibility(View.VISIBLE);
+                }
+            }
         }
         return true;
     }
